@@ -29,7 +29,8 @@ from langchain_classic.agents import initialize_agent, AgentType
 from langchain_classic.callbacks import StreamlitCallbackHandler
 
 # Groq API key
-groq_api_key = os.getenv("GROQ_API_KEY")
+# groq_api_key = os.getenv("GROQ_API_KEY")
+groq_api_key = st.secrets["GROQ_API_KEY"]
 
 # Arxiv & Wikipedia In-built Tools
 arxiv_wrapper = ArxivAPIWrapper(top_k_results=3, doc_content_chars_max=2000)
